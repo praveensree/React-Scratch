@@ -7,8 +7,8 @@ class Name extends Component {
     }
     componentDidMount() {
       setTimeout(() => {
-        this.setState({Fname: "Praveen Sree"})
-      }, 1000)
+        this.setState({Fname: "Abisa Marina"})
+      }, 3000)
     }
     render() {
       return (

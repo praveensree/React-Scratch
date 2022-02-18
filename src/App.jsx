@@ -9,7 +9,7 @@ class App extends Component {
         
     }
     
-    handleCount() {
+    handleInc() {
         // this.setState({
         //     count:this.state.count+1
         // },()=>console.log('call back',this.state.count)
@@ -20,14 +20,24 @@ class App extends Component {
         }))
 
     }
+    handleDec() {
+        // this.setState({
+        //     count:this.state.count+1
+        // },()=>console.log('call back',this.state.count)
+        // )
+        // console.log(this.state.count) 
+        this.setState(prevState => ({
+            count: prevState.count - 1
+        }))
+
+    }
     render() {
         return (
             <div>
                 <h1>{this.props.name}</h1>
                 <h1>Count {this.state.count}</h1>
-                <button onClick={() => this.handleCount()}>Increment</button>
-                <button onClick={()=>this.handleName()}>Change Name</button>
-                
+                <button onClick={() => this.handleInc()}>Increment</button>
+                <button onClick={() => this.handleDec()}>Decrement</button>                
             </div>
         )
     }

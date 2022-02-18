@@ -6,7 +6,7 @@ function Posts() {
 
   useEffect(() => {
     axios
-      .get("http://jsonplaceholder.typicode.com/posts")
+      .get("https://jsonplaceholder.ir/users")
       .then((response) => setPosts(response.data));
   }, []);
 
@@ -14,8 +14,11 @@ function Posts() {
     <ul className>
       {posts.map((post) => (
         <li  key={post.id}>
-          <h4>{post.title}</h4>
-          <p>{post.body}</p>
+          <h4>{post.name}</h4>
+          <p>{post.username}</p>
+          <p>{post.email}</p>
+          <p>{post.address.country}</p>
+          <p>{post.address.geo.lat}</p>
         </li>
       ))}
     </ul>
