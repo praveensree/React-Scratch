@@ -3,16 +3,16 @@ import React,{Component} from 'react';
 class Name extends Component {
     constructor(props) {
       super(props);
-      this.state = {Fname: "Sree"};
+      this.state = {Fname: "Habibi"};
     }
     componentDidMount() {
       setTimeout(() => {
-        this.setState({Fname: "Abisa Marina"})
+        this.setState({Fname: "Dubai"})
       }, 3000)
     }
     render() {
       return (
-        <h1>My Name is {this.state.Fname}</h1>
+        <h1>Come to {this.state.Fname}</h1>
       );
     }
   }
