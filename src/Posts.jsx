@@ -1,17 +1,18 @@
 import React,{useEffect,useState} from "react";
 import axios from "axios";
 
-function Posts() {
+function Posts(props) {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
     axios
       .get("https://jsonplaceholder.ir/users")
       .then((response) => setPosts(response.data));
-  }, []);
+  }, [props.name,]);
 
   return (
     <ul className>
+      {props.name}
       {posts.map((post) => (
         <li  key={post.id}>
           <h4>{post.name}</h4>
