@@ -16,18 +16,23 @@ module.exports = {
         rules: [
             {
                 // for any file with a suffix of js or jsx
-                test: /\.jsx?$/,
+                test: /\.(jsx|js)?$/,
                 
                 exclude: /node_modules/,
                 // use the babel-loader for transpiling JavaScript to a suitable format
+                
                 loader: 'babel-loader',
                 options: {
                     
                     presets: ["@babel/preset-env", "@babel/preset-react"]
-                }
+                },
+                
             }
         ]
     },
+    resolve: {
+        extensions: ['*', '.js', '.jsx','.css'],
+      },
     // add a custom index.html as the template
     plugins: [new HtmlWebpackPlugin({ template: path.resolve(__dirname, 'src', 'index.html') })]
 };

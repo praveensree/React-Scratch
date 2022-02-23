@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+//import './App.css'
 
 class App extends Component {
     constructor(props) {
@@ -31,7 +32,7 @@ class App extends Component {
             <div>
                 <h1>{this.props.name}</h1>
                 <h1>Count {this.state.count}</h1>
-                <button onClick={() => this.handleInc()}>Increment</button>
+                <button class="btn" onClick={() => this.handleInc()}>Increment</button>
                 <button onClick={() => this.handleDec()}>Decrement</button>                
             </div>
         )

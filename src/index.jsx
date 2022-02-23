@@ -4,6 +4,7 @@ import Posts from "./Posts.jsx";
 import { Name } from './Name.jsx';
 import {App} from './App.jsx'
 import Array from './Array.jsx'
+import User from './User.jsx';
 
 function Home() {
     return (
@@ -12,8 +13,9 @@ function Home() {
           <Array/>
           <App/>
           <Name />
-        <Posts name="Praveen"/>
-        
+        {/* <Posts name="Praveen"/>
+         */}
+         <User/>
       </div>
     );
   }
