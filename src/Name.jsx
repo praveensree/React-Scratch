@@ -16,4 +16,4 @@ class Name extends Component {
       );
     }
   }
-  export {Name};
+  export default Name;

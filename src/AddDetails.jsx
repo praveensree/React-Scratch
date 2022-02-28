@@ -42,19 +42,19 @@ class AddDetails extends React.Component {
             <FormGroup row>
               <Label for="name">Name</Label>
 
-              <Input type="text" name="Name" onChange={this.NameHandle} value={this.state.Name} placeholder="Enter Name" />
+              <Input type="text" name="Name" onChange={this.NameHandle}  placeholder="Enter Name" />
 
             </FormGroup>
             <FormGroup row>
               <Label for="age" >Age</Label>
 
-              <Input type="text" name="age" onChange={this.AgeHandle} value={this.state.Age} placeholder="Enter Age" />
+              <Input type="text" name="age" onChange={this.AgeHandle}  placeholder="Enter Age" />
 
             </FormGroup>
             <FormGroup row>
               <Label for="contact" >Contact</Label>
 
-              <Input type="text" name="contact" onChange={this.ContactHandle} value={this.state.Contact} placeholder="Enter Contact" />
+              <Input type="text" name="contact" onChange={this.ContactHandle}  placeholder="Enter Contact" />
 
             </FormGroup>
 
