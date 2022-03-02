@@ -1,19 +1,36 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import Posts from "./Posts.jsx";
 import  Name  from './Name.jsx';
 import Array from './Array.jsx'
 import User from './User.jsx';
+import Table from './Table.jsx';
 import AddDetails from './AddDetails.jsx';
 
-function Home() {
+import axios from 'axios';
+function Home(props) {
+
+    const [users, setUsers] = useState([])
+  useEffect(()=>{
+    axios.get("http://localhost:10807/api/Hospital/").then((response)=>setUsers(response.data));
+},[]);
+
+function deleteUser(id){
+    axios.delete("http://localhost:10807/api/Hospital/"+id).then
+  
+  ( res => {
+    
+    setUsers(users.filter((user )=> user.id !== id));
+  })
+  }
     return (
         <div >
-            <h1>Home Page</h1>
-            <AddDetails />
+           
+            {/* <AddDetails />
             <Array />
             <Name />
-            <Posts />
-            <User />
+            <Posts /> */}
+            <Table/>
+            {/* <User users ={users} deleteUser={deleteUser}/> */}
         </div>
     );
 }

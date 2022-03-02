@@ -1,31 +1,38 @@
-import axios from 'axios'
-import React ,{useState, useEffect} from 'react'
+
+import React from 'react'
 
 
-export default function User() {
-    const [Peoples, setPeoples]=new useState([])
-    useEffect(()=>{
-        axios.get('http://localhost:10807/api/Hospital').then((response)=>setPeoples(response.data));
-    },[]);
-  return (
-    <div>
-        <h1>Users</h1>
-       
-        <table border="1" border-collapse="collapse">
+const User = (props) => (
+    
+    <table>
+        <thead>
             <tr>
                 <th>Name</th>
                 <th>Age</th>
                 <th>Contact</th>
             </tr>
-            {Peoples.map((people)=>(
-            <tr key={people.id}>
-                <td>{people.Name}</td>
-                <td>{people.Age}</td>
-                <td>{people.Contact}</td>
-            </tr>
-            ))}
-        </table>
-        
-    </div>
-  )
-}
+        </thead>
+        <tbody>
+            {props.users.length > 0 ? (
+                props.users.map(user => 
+                    <tr key={user.Id}>
+                        <td>{user.Name}</td>
+                        <td>{user.Age}</td>
+                        <td>{user.Contact}</td>
+                        <td>
+                            <button className="button muted-button">Edit</button>
+                            <button
+                                onClick={() =>props.deleteUser(user.Id)}className="button muted-button">Delete</button>
+                        </td>
+                    </tr>
+                )
+            ) : (
+                <tr>
+                    <td colSpan={3}>No users</td>
+                </tr>
+            )}
+        </tbody>
+    </table>
+)
+
+export default User;
