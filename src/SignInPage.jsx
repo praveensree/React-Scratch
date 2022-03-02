@@ -1,6 +1,5 @@
 import React, { useState, useContext } from 'react';
 import { useHistory } from 'react-router-dom';
-
 import { Form } from 'react-bootstrap';
 
 
@@ -106,8 +105,10 @@ const SignInPage = (props) => {
                 {errors.password}
               </Form.Control.Feedback>
             </Form.Group>
-
-            <button className="login-sub" type="submit">
+              <div>
+                <br/>
+              </div>
+            <button className="btn" type="submit">
               Login
             </button>
           </div>

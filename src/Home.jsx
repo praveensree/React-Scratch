@@ -1,7 +1,6 @@
 import React from 'react';
 import Posts from "./Posts.jsx";
 import  Name  from './Name.jsx';
-import  App  from './App.jsx'
 import Array from './Array.jsx'
 import User from './User.jsx';
 import AddDetails from './AddDetails.jsx';

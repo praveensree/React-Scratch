@@ -64,7 +64,7 @@ class AddDetails extends React.Component {
               <Col >
               </Col>
               <Col>
-                <button type="button" onClick={this.AddPatient} >Submit</button>
+                <button type="button" className="btn" onClick={this.AddPatient} >Submit</button>
               </Col>
 
             </FormGroup>

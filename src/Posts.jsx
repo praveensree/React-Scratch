@@ -5,7 +5,7 @@ function Posts(props) {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    axios
+     axios
       .get("https://jsonplaceholder.ir/users")
       .then((response) => setPosts(response.data));
   }, [props.name,]);

@@ -2,6 +2,9 @@ import React from 'react';
 import { BrowserRouter,Route, Switch } from 'react-router-dom';
 import SignInPage from './SignInPage.jsx';
 import Home from './Home.jsx';
+import './App.css'
+
+
 
 const App = () => {
     return (
@@ -12,7 +15,7 @@ const App = () => {
   
             <Route exact path="/home" component={Home}></Route>
   
-          
+            
           </Switch>
           </BrowserRouter>
       </main>

@@ -3,7 +3,7 @@ body{
     height: 100vh;
     display: grid;
     place-items: center;
-    background-color: #000000;
+    background-color: #ebd2d2;
 }
 .btn{
     color:#fff;
